@@ -1,0 +1,111 @@
+body {
+  
+    min-height: 100vh;
+    background: url('images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add your custom CSS if necessary */
+
+.header {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust the max-width of your logo */
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav ul li:first-child {
+    margin-left: 0; /* Remove margin for the first item */
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: antiquewhite; /* Text color: antique white */
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative; /* Add position relative to create a reference point for the ::before pseudo-element */
+    font-family: 'Helvetica', sans-serif;
+}
+
+.nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust the position to place the underline below the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #6A704C; /* Underline color */
+    transition: width 0.3s ease; /* Transition effect */
+}
+
+.nav ul li a:hover::before {
+    width: 100%; /* Expand the underline on hover */
+}
+
+
+.container-contact {
+    width: 60%;
+    margin: 100px auto; /* Center the container horizontally and add space from the top */
+    padding: 45px;
+    border-radius: 0;
+}
+
+.row {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.col-md-7 {
+    padding: 20px;
+}
+
+.col-md-5 {
+    background: #1089ff;
+    padding: 20px;
+    color: white;
+}
+
+.form-control {
+    height: 52px;
+    background: #fff;
+    color: #000;
+    font-size: 14px;
+    border-radius: 2px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.bi {
+    font-size: 20px;
+}
+
+.d-flex p {
+    font-size: 18px;
+    padding-left: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

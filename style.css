@@ -1,0 +1,255 @@
+/* Global Styles */
+body {
+    /* Background styles */
+    background-color: #ffffff; /* Fallback background color */
+    min-height: 100vh;
+    background: url('images/background.jpg') no-repeat; /* Background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    padding-top: 80px;
+    margin: 0; /* Ensure no default margins */
+}
+
+/* Header Styles */
+.header {
+    /* Header appearance */
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    /* Container layout */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    /* Logo styling */
+    max-width: 100px; /* Adjust the max-width of your logo */
+}
+
+.nav ul {
+    /* Navigation styles */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    /* Navigation item styles */
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav ul li:first-child {
+    /* Adjust first navigation item */
+    margin-left: 0; /* Remove margin for the first item */
+}
+
+.nav ul li a {
+    /* Navigation link styles */
+    text-decoration: none;
+    color: antiquewhite; /* Text color: antique white */
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative; /* Add position relative to create a reference point for the ::before pseudo-element */
+    font-family: 'Helvetica', sans-serif;
+}
+
+.nav ul li a::before {
+    /* Navigation link underline */
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust the position to place the underline below the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #6A704C; /* Underline color */
+    transition: width 0.3s ease; /* Transition effect */
+}
+
+.nav ul li a:hover::before {
+    /* Navigation link underline on hover */
+    width: 100%; /* Expand the underline on hover */
+}
+
+/* Banner Styles */
+.banner {
+    /* Banner appearance */
+    max-width: 100%; /* Ensure banner adjusts to the viewport */
+    height: auto; /* Allow height to adjust proportionally */
+    margin-top: 150px; /* Adjust margin for spacing */
+}
+
+/* Featured Products Styles */
+.featured-products {
+    /* Featured products section */
+    text-align: center; /* Center the text horizontally */
+    padding: 50px 0; /* Add some padding for spacing */
+    margin-top: 1px; /* Adjust margin for spacing between banner and featured products */
+}
+
+.featured-products .container {
+    /* Featured products container */
+    display: flex;
+    justify-content: center;
+    color: antiquewhite;
+    font-weight: 900;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+/* Product Styles */
+.product {
+    /* Product section */
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.product-container {
+    /* Product container */
+    padding: 0 10vw;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the top */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+    /* Hide scrollbar */
+    display: none;
+}
+
+.product-card {
+    /* Product card */
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 5px;
+}
+
+.product-image {
+    /* Product image */
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb {
+    /* Product thumbnail */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-btn {
+    /* Add to cart button */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.product-card:hover .card-btn {
+    /* Add to cart button on hover */
+    opacity: 1;
+}
+
+.card-btn:hover {
+    /* Add to cart button hover state */
+    background: #ff7d7d;
+    color: #fff;
+}
+
+.product-info {
+    /* Product information */
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.product-brand {
+    /* Product brand */
+    text-transform: uppercase;
+    color: antiquewhite;
+    font-family: sans-serif;
+}
+
+.product-short-description {
+    /* Product short description */
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+    color: green;
+}
+
+.price {
+    /* Product price */
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* Previous and Next Buttons */
+.pre-btn,
+.nxt-btn {
+    /* Previous and Next buttons */
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.pre-btn {
+    /* Previous button */
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.nxt-btn {
+    /* Next button */
+    right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+    /* Button icons */
+    opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+    /* Button icon hover state */
+    opacity: 1;
+}
+
+

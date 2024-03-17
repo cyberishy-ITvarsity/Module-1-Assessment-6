@@ -1,0 +1,155 @@
+ body {
+  
+    min-height: 100vh;
+    background: url('images/background.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 100px; /* Adjust the max-width of your logo */
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav ul li:first-child {
+    margin-left: 0; /* Remove margin for the first item */
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: antiquewhite; /* Text color: antique white */
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative; /* Add position relative to create a reference point for the ::before pseudo-element */
+    font-family: 'Helvetica', sans-serif;
+}
+
+.nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Adjust the position to place the underline below the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #6A704C; /* Underline color */
+    transition: width 0.3s ease; /* Transition effect */
+}
+
+.nav ul li a:hover::before {
+    width: 100%; /* Expand the underline on hover */
+}
+
+.product-details {
+    margin-top: 130px; /* Adjust this value based on your header height */
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+}
+
+.product-details {
+    margin-top: 130px; /* Adjust this value based on your header height */
+    display: flex;
+}
+
+.product-images {
+    width: 46%; /* Adjust width for product images */
+}
+
+.additional-images {
+    width: 30%; /* Adjust width for additional images */
+    display: flex;
+    flex-direction: column; /* Stack additional images vertically */
+    align-items: flex-start; /* Align additional images to the left */
+    margin-left: auto; /* Push additional images to the right */
+    margin-top: -300px; /* Adjust to align additional images with the top of the main image */
+}
+
+.additional-images img {
+    width: 80px; /* Set width for additional images */
+    height: 80px; /* Set height for additional images */
+    margin-bottom: 10px; /* Add some spacing below each additional image */
+}
+
+
+}
+
+.product-info {
+    width: 50%; /* Set width for product information */
+}
+
+.product-info h1 {
+    font-size: 30px; /* Increase title size */
+    color:antiquewhite;
+}
+
+.price {
+    font-size: 24px; /* Increase price size */
+    color: red
+    
+}
+
+.availability {
+    font-size: 20px; /* Increase availability size */
+    margin-bottom: 10px;
+    color: green
+}
+
+.description {
+    margin-bottom: 20px;
+    color: white
+}
+
+.product-table {
+    width: 100%;
+}
+
+.product-table td {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.cart-button, .wishlist-button, .buy-now {
+    background-color:#357ae8 ;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add bottom margin to all buttons for consistent spacing */
+}
+
+.cart-button:hover, .wishlist-button:hover, .buy-now:hover{
+    background-color: #CC0000;
+}
